@@ -32,6 +32,10 @@ make
 sudo make install</pre>
 # Tools Check:
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-16-07.png)
+# Iverilog Installation
+<prev>sudo apt-get install iverilog</prev>
+# Tool Check
+
 
 
 
