@@ -18,6 +18,7 @@ Terminal: gnome-terminal
 CPU: 12th Gen Intel i5-12450H (1) @
 GPU: 00:02.0 VMware SVGA II Adapter
 Memory: 1278MiB / 1968MiB</pre>
+(System Information retrived using <pre>neofetch</prev>
 
 
 
