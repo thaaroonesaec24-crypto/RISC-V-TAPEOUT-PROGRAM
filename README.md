@@ -5,11 +5,10 @@
 <pre>## 🖥️ System Information
 
 | Property       | Details                        |
-| -------------- | ------------------------------ |
+|----------------|--------------------------------|
 | **OS**         | Ubuntu 22.04.5 LTS x86\_64     |
 | **Host**       | VirtualBox 1.2                 |
 | **Kernel**     | 6.8.0-83-generic               |
-| **Uptime**     | 1 hour, 19 mins                |
 | **Packages**   | 1816 (dpkg), 9 (snap)          |
 | **Shell**      | bash 5.1.16                    |
 | **Resolution** | 800x600                        |
