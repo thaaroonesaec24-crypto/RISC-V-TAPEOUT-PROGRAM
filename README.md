@@ -1,10 +1,10 @@
 # Week 0VSD RISC-V Tapeout Program
 [Installtion Of Tools](https://www.vlsisystemdesign.com/soc-labs/)
 
-# System Information:
-<pre>## 🖥️ System Information
 
 ## 🖥️ System Information
+
+
 
 | Property   | Details                      |
 |------------|------------------------------|
@@ -28,7 +28,6 @@
 
 
 
-</pre>
 (System Information retrived using neofetch)
 
 # Yosys Installation
@@ -44,23 +43,18 @@ make
 sudo make install</pre>
 ### Tool Check:
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-16-07.png)
-# Iverilog Installation
+## Iverilog Installation
 ### commands for installation
 <prev>sudo apt-get install iverilog</prev>
 ### Tool Check
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-19-17.png)
-# GTKwave Installation
+## GTKwave Installation
 ### commands for installation
 <prev>sudo apt update
 sudo apt install gtkwave</prev>
 ### Tool check
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-21-23.png)
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-28-01%20(1).png)
-
-| Property  | Details |
-|----------|----------|
-| OS   | Ubuntu 22.04.5 LTS x86_64  |
-| Value 3  | Value 4  |
 
 
 
