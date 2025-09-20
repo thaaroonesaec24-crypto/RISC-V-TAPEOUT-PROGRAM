@@ -21,7 +21,7 @@ Memory: 1278MiB / 1968MiB</pre>
 (System Information retrived using neofetch)
 
 # Yosys Installation
-###Commands for installations
+### Commands for installations
 <pre>git clone https://github.com/YosysHQ/yosys.git
 cd yosys 
 sudo apt install make 
@@ -34,12 +34,14 @@ sudo make install</pre>
 ### Tools Check:
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-16-07.png)
 # Iverilog Installation
+### commands for installation
 <prev>sudo apt-get install iverilog</prev>
 ### Tool Check
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-19-17.png)
 # GTKwave Installation
+### commands for installation
 <prev>sudo apt update
-sudo apt install gtkwave</pre>
+ sudo apt install gtkwave</pre>
 ### Tool check
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-21-23.png)
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-28-01%20(1).png)
