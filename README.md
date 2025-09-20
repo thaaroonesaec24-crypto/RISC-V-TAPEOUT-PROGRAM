@@ -37,7 +37,7 @@ sudo make install</pre>
 <prev>sudo apt-get install iverilog</prev>
 ### Tool Check
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/Week-0-VLSI-Tape-Out/blob/main/pictures.png/Screenshot%20from%202025-09-19%2021-19-17.png)
-#GTKwave Installation
+# GTKwave Installation
 <prev>sudo apt update
 sudo apt install gtkwave</pre>
 ### Tool check
