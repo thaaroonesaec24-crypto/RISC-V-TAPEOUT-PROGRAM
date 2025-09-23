@@ -65,7 +65,7 @@
 #### Verification of Synthesis
   * Testbench used is same as the RTL testbench.
 
-![Tools Check]()
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%202025-09-23%20231603.png)
 
 * If the output is same as RTL output the netlist file is correct.
   
