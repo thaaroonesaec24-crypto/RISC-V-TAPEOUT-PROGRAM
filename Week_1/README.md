@@ -60,7 +60,7 @@
  #### What is yosys?
   * Yosys is a tool used for converting the RTL Drsign to Netlist.
 
- ![Tools Check]()
+ ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%202025-09-23%20233236.png)
 
 #### Verification of Synthesis
   * Testbench used is same as the RTL testbench.
@@ -68,7 +68,45 @@
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%202025-09-23%20231603.png)
 
 * If the output is same as RTL output the netlist file is correct.
+
+## Yosys Synthesis flow
+
+  This workflow illustrates performing RTL-to-gate-level synthesis using the Yosys open synthesis suite along with the sky130_fd_sc_hd standard cell library.
   
+#### Step 1 : Inovoke Yosys
+~~~
+ yosys
+~~~
+#### Step 2 : Read Liberty File
+  You are loading the Liberty file for the Sky130 standard cell library, which is essential for mapping the synthesized netlist to technology-specific cells.
+~~~
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+~~~
+#### Step 3 : Read RTL Verilog
+You are loading the Verilog file containing your RTL design, and if it is read successfully, you should see the message "Successfully finished verilog frontend."
+~~~
+read_verilog good_mux.v
+~~~
+#### Step 4 : Synthesize the top-level module 
+You are synthesizing the top module, transforming the RTL design into a gate-level netlist that is independent of the target technology.
+~~~
+synth -top good_mux
+~~~
+#### Step 5 : Map synthesized RTL to standard cells 
+You are converting the synthesized netlist into a technology-dependent netlist by mapping it to the standard cells specified in the Liberty file.
+~~~
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+~~~
+#### Step 6 : View synthesized netlist as a schematic
+You can display the synthesized netlist as a schematic diagram, which visually represents the logic implemented by the synthesis tool.
+~~~
+show
+~~~
+#### step 7 : Write the synthesized gate-level netlist 
+You are exporting the synthesized gate-level netlist to a Verilog file while omitting attributes to keep the code clean and more readable.
+~~~
+ write_verilog -noattr good_mux_netlist.v
+~~~
 
 
 
