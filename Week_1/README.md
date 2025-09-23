@@ -1,20 +1,20 @@
-#DAY ONE
-## INTRODUCTION TO IVERILOG
-### Simulator
+# DAY ONE
+## 1. INTRODUCTION TO IVERILOG
+#### Simulator
 * RTL design is validated by simulating its behavior to ensure it adheres to the specifications.
 * The simulation tool used in this program is Icarus Verilog (iverilog).
 
-### Design 
+#### Design 
 * The design refers to the Verilog code or collection of Verilog modules.
 * It implements the intended functionality to satisfy the required specifications.
 
-### Testbench
+#### Testbench
 * A testbench is used to provide test inputs (stimuli) to the design.
 * It simulates the input signals and monitors the design’s output to ensure correct functionality.
 * Note that a testbench does not have any primary input or output ports.
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/TEST%20BENCH.png)
 
-### Verilog-based Simulation Flow
+#### Verilog-based Simulation Flow
 * Write the Design (RTL Verilog module) and a Testbench to provide input stimuli and monitor outputs.
 * Compile both files using the iverilog tool to generate a simulation executable.
 * Run the executable to produce a Value Change Dump (VCD) file recording signal transitions.
@@ -24,7 +24,7 @@
 
 --- 
 
-## ENVIRONMENT SETUP
+## 2. ENVIRONMENT SETUP
 * Create a new folder named VSD
   
 * Open the terminal inside the VSD folder and navigate into it to verify that all files are correctly stored.
@@ -36,7 +36,9 @@
 
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/environment.png)
 
-## SIMULATION PROCESS
+---
+
+## 3. SIMULATION PROCESS
 * Providing the RTL design and its corresponding testbench as inputs to the Iverilog simulator.
   
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/comand%20for%20the%20iverilog.png)
@@ -47,7 +49,17 @@
 
 * Displaying the simulation waveform using GTKWave for visual analysis.
 
-  ![Tools Check]()
+  ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/gtk%20window.png)
+
+* Execute the following command to view both the tb_good_mux.v -o good_mux.v code.
+  ~~~
+  gvim tb_good_mux.v -o good_mux.v
+  ~~~
+
+## 4. INTRODUCTION TO YOSYS
+ #### What is yosys?
+  * Yosys is a tool used for converting the RTL Drsign to Netlist.
+
 
   
 
