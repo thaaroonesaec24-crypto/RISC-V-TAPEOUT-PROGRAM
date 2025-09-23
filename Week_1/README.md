@@ -34,7 +34,14 @@
    ~~~
    git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/environment.png)
+## SIMULATION PROCESS
+* Providing the RTL design and its corresponding testbench as inputs to the Iverilog simulator.
 ![Tools Check]()
+  
+* 
+
+
 
 
 
