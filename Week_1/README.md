@@ -11,9 +11,13 @@
 * A testbench is used to provide test inputs (stimuli) to the design.
 * It simulates the input signals and monitors the design’s output to ensure correct functionality.
 * Note that a testbench does not have any primary input or output ports.
+![Tools Check]()
 
 ### Verilog-based Simulation Flow
-The iverilog simulation process starts with writing the Design (RTL Verilog module) along with a Testbench that provides input stimuli to the design and monitors the outputs. These files are compiled together using the iverilog tool to create a simulation executable. Running this executable generates a Value Change Dump (VCD) file, which logs the signal changes over time. This VCD file can then be opened with gtkwave, a waveform viewer, enabling designers to visually analyze and debug the signal behavior to confirm the design’s correct operation.
+* Write the Design (RTL Verilog module) and a Testbench to provide input stimuli and monitor outputs.
+* Compile both files using the iverilog tool to generate a simulation executable.
+* Run the executable to produce a Value Change Dump (VCD) file recording signal transitions.
+* Open the VCD file with gtkwave to visually analyze and debug signal behavior for correctness.
 
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/iverilog%20design%20flow.png)
 
