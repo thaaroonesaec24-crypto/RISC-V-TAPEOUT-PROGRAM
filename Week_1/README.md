@@ -14,3 +14,5 @@
 # Verilog-based Simulation Flow
 The iverilog simulation process starts with writing the Design (RTL Verilog module) along with a Testbench that provides input stimuli to the design and monitors the outputs. These files are compiled together using the iverilog tool to create a simulation executable. Running this executable generates a Value Change Dump (VCD) file, which logs the signal changes over time. This VCD file can then be opened with gtkwave, a waveform viewer, enabling designers to visually analyze and debug the signal behavior to confirm the design’s correct operation.
 
+![Tools Check]()
+
