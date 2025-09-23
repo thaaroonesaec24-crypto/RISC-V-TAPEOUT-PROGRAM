@@ -17,6 +17,7 @@ The iverilog simulation process starts with writing the Design (RTL Verilog modu
 
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/iverilog%20design%20flow.png)
 
+--- 
 
 ## ENVIRONMENT SETUP
 ###
