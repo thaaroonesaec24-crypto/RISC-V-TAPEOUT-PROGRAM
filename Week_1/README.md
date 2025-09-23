@@ -43,8 +43,13 @@
   
 * Generating the Value Change Dump (VCD) file and visualizing it using GTKWave.
 
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-23%2021-31-39.png)
 
-![Tools Check]()
+* Displaying the simulation waveform using GTKWave for visual analysis.
+
+  ![Tools Check]()
+
+  
 
 
 
