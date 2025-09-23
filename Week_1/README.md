@@ -1,3 +1,4 @@
+#DAY ONE
 ## INTRODUCTION TO IVERILOG
 ### Simulator
 * RTL design is validated by simulating its behavior to ensure it adheres to the specifications.
@@ -24,5 +25,18 @@
 --- 
 
 ## ENVIRONMENT SETUP
-###
+* Create a new folder named VSD
+  
+* Open the terminal inside the VSD folder and navigate into it to verify that all files are correctly stored.
+  ~~~
+  cd VSD
+* Clone the workshop repository
+   ~~~
+   git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+![Tools Check]()
+
+
+
+ 
 
