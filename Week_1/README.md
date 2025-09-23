@@ -69,7 +69,7 @@
 
 * If the output is same as RTL output the netlist file is correct.
 
-## Yosys Synthesis flow
+## 5. Yosys Synthesis flow
 
   This workflow illustrates performing RTL-to-gate-level synthesis using the Yosys open synthesis suite along with the sky130_fd_sc_hd standard cell library.
   
