@@ -60,7 +60,14 @@
  #### What is yosys?
   * Yosys is a tool used for converting the RTL Drsign to Netlist.
 
+ ![Tools Check]()
 
+#### Verification of Synthesis
+  * Testbench used is same as the RTL testbench.
+
+![Tools Check]()
+
+* If the output is same as RTL output the netlist file is correct.
   
 
 
