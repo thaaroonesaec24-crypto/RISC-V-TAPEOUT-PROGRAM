@@ -84,36 +84,43 @@
 ~~~
  yosys
 ~~~
+![Tools Check]()
 #### Step 2 : Read Liberty File
   You are loading the Liberty file for the Sky130 standard cell library, which is essential for mapping the synthesized netlist to technology-specific cells.
 ~~~
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ~~~
+![Tools Check]()
 #### Step 3 : Read RTL Verilog
 You are loading the Verilog file containing your RTL design, and if it is read successfully, you should see the message "Successfully finished verilog frontend."
 ~~~
 read_verilog good_mux.v
 ~~~
+![Tools Check]()
 #### Step 4 : Synthesize the top-level module 
 You are synthesizing the top module, transforming the RTL design into a gate-level netlist that is independent of the target technology.
 ~~~
 synth -top good_mux
 ~~~
+![Tools Check]()
 #### Step 5 : Map synthesized RTL to standard cells 
 You are converting the synthesized netlist into a technology-dependent netlist by mapping it to the standard cells specified in the Liberty file.
 ~~~
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ~~~
+![Tools Check]()
 #### Step 6 : View synthesized netlist as a schematic
 You can display the synthesized netlist as a schematic diagram, which visually represents the logic implemented by the synthesis tool.
 ~~~
 show
 ~~~
+![Tools Check]()
 #### step 7 : Write the synthesized gate-level netlist 
 You are exporting the synthesized gate-level netlist to a Verilog file while omitting attributes to keep the code clean and more readable.
 ~~~
  write_verilog -noattr good_mux_netlist.v
 ~~~
+![Tools Check]()
 
 
 
