@@ -90,7 +90,7 @@
 ~~~
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ~~~
-![Tools Check]()
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/readliberty.png)
 #### Step 3 : Read RTL Verilog
 You are loading the Verilog file containing your RTL design, and if it is read successfully, you should see the message "Successfully finished verilog frontend."
 ~~~
