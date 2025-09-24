@@ -96,7 +96,7 @@ You are loading the Verilog file containing your RTL design, and if it is read s
 ~~~
 read_verilog good_mux.v
 ~~~
-![Tools Check]()
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/read%20verilog.png)
 #### Step 4 : Synthesize the top-level module 
 You are synthesizing the top module, transforming the RTL design into a gate-level netlist that is independent of the target technology.
 ~~~
