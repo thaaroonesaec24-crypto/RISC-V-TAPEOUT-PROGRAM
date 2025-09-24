@@ -121,8 +121,11 @@ You are exporting the synthesized gate-level netlist to a Verilog file while omi
  write_verilog -noattr good_mux_netlist.v
 ~~~
 ![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/write%20verilog.png)
-
-![Tools Check]()
+##### To see the netlist file use 
+~~~
+!gvim good_latch_netlist.v
+~~~
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/gvim%20mux.png)
 
 
 
