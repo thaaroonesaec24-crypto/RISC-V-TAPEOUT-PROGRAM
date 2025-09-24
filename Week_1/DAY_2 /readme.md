@@ -1,16 +1,20 @@
-# INTRODUCTION TO timing.libs
-## library formate
-Liberty format is an industry-standard file format used to describe library cells of a technology.
-A cell can be a standard cell, I/O buffer, or a complex IP block.
-Each cell description includes:
-Timing information
-Power estimation
-Area
-Functionality
-Operating conditions
-Technically, it represents the timing and power properties of black boxes (modules whose internal details are hidden).
-It is an ASCII-based format, typically stored in files with a .lib extension.
-The contents of a Liberty file can be divided into two parts:
-Common information shared by all standard cells
-Cell-specific information (e.g., timing, power, functionality)
+# INTRODUCTION TO TIMING LIBRARIES
+
+ A .lib file (Liberty file) is a text-based technology library that defines the functionality, timing, power, and area of standard cells, and is used in synthesis, timing, and power analysis.
+
+## what is PVT?
+Three key factors that affect how a circuit
+ p -> process.
+
+ v -> voltage.
+ 
+ T -> Temperature.
+
+ ## What is sky130_fd_sc_hd__tt_025C_1v80.lib?
+ The file sky130_fd_sc_hd__tt_025C_1v80.lib is a Liberty timing library for the SkyWater 130nm (sky130) standard cell library.
+| Term     | Parameter   | Value            |
+|----------|-------------|------------------|
+| **tt**   | Process     | Typical-Typical  |
+| **1v80** | Voltage     | 1.8 V            |
+| **025C** | Temperature | 25°C             |
 
