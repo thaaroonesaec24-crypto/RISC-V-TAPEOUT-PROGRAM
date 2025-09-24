@@ -102,7 +102,7 @@ You are synthesizing the top module, transforming the RTL design into a gate-lev
 ~~~
 synth -top good_mux
 ~~~
-![Tools Check]()
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/synth.png)
 #### Step 5 : Map synthesized RTL to standard cells 
 You are converting the synthesized netlist into a technology-dependent netlist by mapping it to the standard cells specified in the Liberty file.
 ~~~
