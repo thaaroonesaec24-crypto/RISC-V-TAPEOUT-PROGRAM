@@ -1,4 +1,9 @@
-# DAY ONE
+# Table of contents
+### [1. Introduction to iverilog](#1-introduction-to-iverilog)
+### [2. Environment Setup](#2-environment-setup)
+### [3. Simulation Process](#3-simulation-process)
+### [4. Introduction To Yosys](#4-introduction-to-yosys)
+### [5. Yosys Synthesis flow](#5-yosys-synthesis-flow)
 ## 1. INTRODUCTION TO IVERILOG
 #### Simulator
 * RTL design is validated by simulating its behavior to ensure it adheres to the specifications.
