@@ -108,7 +108,7 @@ You are converting the synthesized netlist into a technology-dependent netlist b
 ~~~
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ~~~
-![Tools Check]()
+![Tools Check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/abc.png)
 #### Step 6 : View synthesized netlist as a schematic
 You can display the synthesized netlist as a schematic diagram, which visually represents the logic implemented by the synthesis tool.
 ~~~
