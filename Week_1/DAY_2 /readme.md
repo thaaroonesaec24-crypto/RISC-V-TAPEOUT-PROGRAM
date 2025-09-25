@@ -116,13 +116,15 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 * **Facilitates Parallel Development:** Multiple teams or engineers can work simultaneously on different sub-modules.
 * **Enhances Verification:** Easier to verify and validate smaller sub-modules individually before integration.
 
-## Various Flip Flops codinig styles and optimization
+# Various Flip Flops codinig styles and optimization
 | Flip-Flop Type     | Reset/Set Behavior  | Trigger Condition                   | Use Case                               |
 | ------------------ | ------------------- | ----------------------------------- | -------------------------------------- |
 | Asynchronous Reset | Immediate reset     | `rst` signal (independent of clock) | Fast initialization or emergency reset |
 | Asynchronous Set   | Immediate set       | `set` signal (independent of clock) | Immediate forcing of state             |
 | Synchronous Reset  | Reset on clock edge | `rst` evaluated on clock edge       | Controlled, glitch-free reset          |
 | Synchronous Set    | Set on clock edge   | `set` evaluated on clock edge       | Controlled, synchronous state set      |
+
+## Flip FLops coding styles
 
 ### 1. Asynchronous Reset Flip-Flops
    
