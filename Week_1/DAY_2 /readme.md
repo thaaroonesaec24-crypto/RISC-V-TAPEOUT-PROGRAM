@@ -105,7 +105,66 @@ read_verilog multiple_modules.v
 synth -top sub_module1
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ~~~
-![tools check]()
+![tools check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-25%2021-18-07.png)
+## why sub module synthesis?
+
+* **Improves Modularity:** Easier to design, debug, and maintain smaller, independent blocks.
+* **Speeds Up Synthesis:** Synthesizing smaller sub-modules is faster than synthesizing a large monolithic design.
+* **Enables Incremental Compilation:** Only re-synthesize changed sub-modules, saving time during iterations.
+* **Supports Reusability:** Synthesized sub-modules can be reused across multiple projects without re-synthesis.
+* **Allows Targeted Optimization:** Apply specific optimization strategies to different sub-modules based on their needs.
+* **Facilitates Parallel Development:** Multiple teams or engineers can work simultaneously on different sub-modules.
+* **Enhances Verification:** Easier to verify and validate smaller sub-modules individually before integration.
+
+## Various Flip Flops codinig styles and optimization
+| Flip-Flop Type     | Reset/Set Behavior  | Trigger Condition                   | Use Case                               |
+| ------------------ | ------------------- | ----------------------------------- | -------------------------------------- |
+| Asynchronous Reset | Immediate reset     | `rst` signal (independent of clock) | Fast initialization or emergency reset |
+| Asynchronous Set   | Immediate set       | `set` signal (independent of clock) | Immediate forcing of state             |
+| Synchronous Reset  | Reset on clock edge | `rst` evaluated on clock edge       | Controlled, glitch-free reset          |
+| Synchronous Set    | Set on clock edge   | `set` evaluated on clock edge       | Controlled, synchronous state set      |
+
+### 1. Asynchronous Reset Flip-Flops
+   
+```verilog
+   always @(posedge clk or posedge rst) begin
+    if (rst)
+        q <= 0;
+    else
+        q <= d;
+end
+```
+### 2. Asynchronous Set Flip-Flop.
+```verilog
+always @(posedge clk or posedge set) begin
+    if (set)
+        q <= 1;
+    else
+        q <= d;
+end
+```
+### 3. Synchronous Reset Flip-Flop.
+```verilog
+always @(posedge clk) begin
+    if (rst)
+        q <= 0;
+    else
+        q <= d;
+end
+```
+### 4. Synchronous Set Flip-Flop.
+```verilog
+always @(posedge clk) begin
+    if (set)
+        q <= 1;
+    else
+        q <= d;
+end
+```
+
+
+
+
 
 
 
