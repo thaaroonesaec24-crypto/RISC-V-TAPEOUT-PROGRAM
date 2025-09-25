@@ -82,6 +82,7 @@ module multiple_modules(a, b, c, y);
 endmodule
 
 ~~~
+![tools check]()
 
 ## Hierachy VS Flatten
 | Aspect              | Hierarchical Synthesis                          | Flat Synthesis                           |
