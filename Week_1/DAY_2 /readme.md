@@ -95,6 +95,18 @@ endmodule
 | **Performance (QoR)**| May miss cross-module improvements             | Better QoR due to full visibility         |
 | **Best Suited For**  | Complex, large designs with reusable IPs       | Small to medium designs needing max optimization |
 
+# Sub Module level Synthesis
+Each sub-module is synthesized independently, optimized, and then the synthesized sub-modules are integrated or composed together to form the complete design.
+## synthesing sub module 1
+~~~
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top sub_module1
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+~~~
+![tools check]()
+
 
 
 
