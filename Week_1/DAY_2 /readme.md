@@ -51,5 +51,49 @@ For basic gates such as OR, hierarchical synthesis prefers NAND + NOT implementa
 * A NOR gate requires stacked PMOS transistors, leading to higher resistance and slower operation.
 * NAND gates provide better scalability as the number of inputs increases.
 
+ ## Flat Synthesis
+Flat Synthesis is a synthesis approach where the entire design hierarchy is flattened into a single-level netlist, and all logic is optimized together without preserving module boundaries.
+
+~~~
+flatten
+~~~
+This command is used to flatten the hierachial design.
+~~~
+module multiple_modules(a, b, c, y);
+  input a;
+  input b;
+  input c;
+  wire net1;
+  wire \u1.a ;
+  wire \u1.b ;
+  wire \u1.y ;
+  wire \u2.a ;
+  wire \u2.b ;
+  wire \u2.y ;
+  output y;
+  assign \u1.y  = \u1.b  & \u1.a ;
+  assign \u2.y  = \u2.b  | \u2.a ;
+  assign \u1.a  = a;
+  assign \u1.b  = b;
+  assign net1 = \u1.y ;
+  assign \u2.a  = net1;
+  assign \u2.b  = c;
+  assign y = \u2.y ;
+endmodule
+
+~~~
+
+## Hierachy VS Flatten
+| Aspect              | Hierarchical Synthesis                          | Flat Synthesis                           |
+|----------------------|------------------------------------------------|------------------------------------------|
+| **Design Structure** | Keeps module boundaries (hierarchy preserved)  | Removes hierarchy → single-level netlist  |
+| **Optimization**     | Optimized block by block (local optimizations) | Optimized globally across whole design    |
+| **Runtime & Memory** | Lower, scales well for large designs           | Higher, may be slow for large designs     |
+| **Reusability**      | Easy to reuse pre-synthesized IPs/blocks       | No direct reuse; everything is re-flattened |
+| **Debugging**        | Easier (debug at module level)                 | Harder (loss of hierarchy)                |
+| **Performance (QoR)**| May miss cross-module improvements             | Better QoR due to full visibility         |
+| **Best Suited For**  | Complex, large designs with reusable IPs       | Small to medium designs needing max optimization |
+
+
 
 
