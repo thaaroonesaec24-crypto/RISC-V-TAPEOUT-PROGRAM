@@ -124,7 +124,7 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 | Synchronous Reset  | Reset on clock edge | `rst` evaluated on clock edge       | Controlled, glitch-free reset          |
 | Synchronous Set    | Set on clock edge   | `set` evaluated on clock edge       | Controlled, synchronous state set      |
 
-## Flip FLops coding styles
+## Flip FLops coding styles and Synthesis
 
 ### 1. Asynchronous Reset Flip-Flops
    
@@ -136,6 +136,9 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         q <= d;
 end
 ```
+![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-25%2022-12-09.png)
+
+![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-26%2014-12-49.png)
 ### 2. Asynchronous Set Flip-Flop.
 ```verilog
 always @(posedge clk or posedge set) begin
@@ -145,6 +148,8 @@ always @(posedge clk or posedge set) begin
         q <= d;
 end
 ```
+![tool check]()
+![tool check]()
 ### 3. Synchronous Reset Flip-Flop.
 ```verilog
 always @(posedge clk) begin
@@ -164,7 +169,7 @@ always @(posedge clk) begin
 end
 ```
 
-![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-25%2022-12-09.png)
+
 
 ## synthesis of flops
 
@@ -178,6 +183,6 @@ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ~~~
-![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-26%2014-12-49.png)
+
 
 
