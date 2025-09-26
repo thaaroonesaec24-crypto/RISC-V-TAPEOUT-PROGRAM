@@ -1,7 +1,7 @@
 # INTRODUCTION TO TIMING LIBRARIES
 
  A .lib file (Liberty file) is a text-based technology library that defines the functionality, timing, power, and area of standard cells, and is used in synthesis, timing, and power analysis.
- ![tools check]()
+ ![tools check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/image.png)
 
 ## what is PVT?
 Three key factors that affect how a circuit
