@@ -166,7 +166,18 @@ end
 
 ![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-25%2022-12-09.png)
 
+## synthesis of flops
 
-
+commands for synthesis 
+~~~
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v 
+synth -top dff_asyncres.v
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+~~~
+![tool check]()
 
 
