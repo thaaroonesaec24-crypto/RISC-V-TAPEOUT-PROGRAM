@@ -124,8 +124,18 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 | Synchronous Reset  | Reset on clock edge | `rst` evaluated on clock edge       | Controlled, glitch-free reset          |
 | Synchronous Set    | Set on clock edge   | `set` evaluated on clock edge       | Controlled, synchronous state set      |
 
-## Flip FLops coding styles and Synthesis
 
+## Flip FLops coding styles and Synthesis
+commands for synthesis 
+~~~
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v 
+synth -top dff_asyncres.v
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+~~~
 ### 1. Asynchronous Reset Flip-Flops
    
 ```verilog
@@ -149,7 +159,7 @@ always @(posedge clk or posedge set) begin
 end
 ```
 ![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-26%2014-44-43.png)
-![tool check]()
+![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-26%2014-59-25.png)
 ### 3. Synchronous Reset Flip-Flop.
 ```verilog
 always @(posedge clk) begin
@@ -159,6 +169,8 @@ always @(posedge clk) begin
         q <= d;
 end
 ```
+![tool check]()
+![tool check]()
 ### 4. Synchronous Set Flip-Flop.
 ```verilog
 always @(posedge clk) begin
@@ -168,21 +180,12 @@ always @(posedge clk) begin
         q <= d;
 end
 ```
+![tool check]()
+![tool check]()
 
 
 
-## synthesis of flops
 
-commands for synthesis 
-~~~
-yosys
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_verilog dff_asyncres.v 
-synth -top dff_asyncres.v
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-show
-~~~
 
 
 
