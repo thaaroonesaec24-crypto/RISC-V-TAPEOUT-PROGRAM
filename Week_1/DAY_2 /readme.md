@@ -170,7 +170,7 @@ always @(posedge clk) begin
 end
 ```
 ![tool check]()
-![tool check]()
+![tool check](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-26%2015-43-35.png)
 ### 4. Synchronous Set Flip-Flop.
 ```verilog
 always @(posedge clk) begin
