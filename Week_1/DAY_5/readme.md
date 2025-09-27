@@ -62,8 +62,10 @@ endmodule
 
    * The output `y` retains its previous value because there is no `else` clause, which may cause unintended latch inference.
 
-### Lab on incomp_case.v
+## Lab on incomplete case
 
+ ### incomp_case.v
+ 
 #### RTL code
 
 ~~~
@@ -80,7 +82,39 @@ endmodule
 
 #### RTL simulation waveform
 
-
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-37-30.png)
 
 #### DOT viewer of incomp_case.v
+
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-30-55.png)
+
+1. **Selective output based on `sel`:**
+
+   * When `sel` is `2'b00`, `y` is assigned the value of `i0`.
+   * When `sel` is `2'b01`, `y` is assigned the value of `i1`.
+
+2. **Incomplete `case` statement:**
+
+   * For other values of `sel` (`2'b10` and `2'b11`), `y` is **not assigned**, which can cause `y` to hold its previous value, potentially inferring a latch.
+
+### bad_case.v
+
+##### RTL code
+~~~
+module bad_case (input i0 , input i1, input i2, input i3 , input [1:0] sel, output reg y);
+always @(*)
+begin
+	case(sel)
+		2'b00: y = i0;
+		2'b01: y = i1;
+		2'b10: y = i2;
+		2'b1?: y = i3;
+		//2'b11: y = i3;
+	endcase
+end
+endmodule
+~~~
+
+#### RTL simulation waveform
+![tool]()
+
