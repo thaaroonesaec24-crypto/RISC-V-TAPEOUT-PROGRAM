@@ -168,10 +168,37 @@ One register `R` drives 100 gates. Instead, clone `R` into `R1` and `R2`, each d
 ## LAB 1:
 
 The files we are using in the labs are 
+
 ![Tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2012-57-37.png)
 
 The command used for logic optimization is 
 ~~~
 opt_clean -purge
 ~~~
+
+We used the opt_check.v file for this lab
+
+![tools](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-14-53.png)
+
+#### Explanation:
+
+- assign y = a ? b : 0; means:
+- If a is true, y is assigned the value of b.
+- If a is false, y is 0.
+
+Use the following commands to opt and syth the opt_check.v file 
+~~~
+read_liberty -lib ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check.v
+synth -top opt_check
+opt_clean -purge
+dfflibmap -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ~/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+~~~
+The optimisied .dot file shows that the opt_check.v is just a AND gate 
 ![Tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-11-20.png)
+
+### LAB 2:
+ The file used is opt_check2.v
+ ![tool]()
