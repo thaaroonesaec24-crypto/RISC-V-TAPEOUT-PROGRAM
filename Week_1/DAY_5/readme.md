@@ -64,7 +64,7 @@ endmodule
 2. **Incomplete behavior if both `i0` and `i2` are false:**
 
    * The output `y` retains its previous value because there is no `else` clause, which may cause unintended latch inference.
-
+---
 ## Lab on incomplete case
 
  ### incomp_case.v
@@ -100,7 +100,7 @@ endmodule
 2. **Incomplete `case` statement:**
 
    * For other values of `sel` (`2'b10` and `2'b11`), `y` is **not assigned**, which can cause `y` to hold its previous value, potentially inferring a latch.
-
+---
 ### bad_case.v
 
 ##### RTL code
@@ -130,4 +130,46 @@ endmodule
 -
 
 #### GLS simulation 
+
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-56-30.png)
+-
+
+1. **Output selection based on `sel`:**
+   * Assigns `y` based on `sel` values:
+     * `2'b00` → `y = i0`
+     * `2'b01` → `y = i1`
+     * `2'b10` → `y = i2`
+     * `2'b1?` (a wildcard covering both `2'b10` and `2'b11`) → `y = i3`
+
+2. **Conflicting case entries and overlap:**
+   * The case `2'b1?` overlaps with `2'b10`, causing ambiguity because `2'b10` is matched twice (`y = i2` and `y = i3`).
+   * The commented out `2'b11` case is covered by `2'b1?`, but this wildcard usage can cause synthesis issues or unexpected behavior.
+
+---
+
+
+## Labs for FOR loop
+
+### mux_generate.v
+
+#### RTL code
+
+ ~~~
+module mux_generate (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
+wire [3:0] i_int;
+assign i_int = {i3,i2,i1,i0};
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 4; k=k+1) begin
+	if(k == sel)
+		y = i_int[k];
+end
+end
+endmodule
+~~~~
+
+
+#### RTL simulation wave
+
 ![tool]()
