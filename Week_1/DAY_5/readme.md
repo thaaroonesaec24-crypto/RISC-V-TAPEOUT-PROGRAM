@@ -204,4 +204,43 @@ endmodule
 
 #### RTL simulation wave 
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2023-13-56.png)
+-
+
+* Implements an 8-output demultiplexer using a `for` loop.
+* Outputs `o0` to `o7` are combined into an 8-bit register `y_int` for straightforward indexing.
+* `y_int` is first cleared to 0, then only the bit corresponding to the select signal `sel` is set to the input `i`.
+* This effectively routes the single input `i` to the chosen output, while all others remain zero.
+* The loop runs sequentially during simulation, ensuring no latches are created.
+* This method offers a compact alternative to writing multiple `if-else` or `case` statements.
+
+## Lab on generate for loop
+
+### 8-bit Ripple Carry Adder
+
+#### RTL code
+~~~
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+~~~
+#### 1-bit Full adder
+~~~
+module fa (input a , input b , input c, output co , output sum);
+	assign {co,sum}  = a + b + c ;
+endmodule
+~~~
+
+#### RTL simulation
+
 ![tool]()
