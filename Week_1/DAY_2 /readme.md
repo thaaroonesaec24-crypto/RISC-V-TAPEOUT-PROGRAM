@@ -191,8 +191,34 @@ always @(posedge clk) begin
         q <= d;
 end
 ```
-![tool check]()
-![tool check]()
+### Summary of Timing Libraries and Synthesis
+
+* **Timing Libraries (.lib files):**
+  Text-based files defining standard cell characteristics like functionality, timing, power, and area. Used in synthesis, timing analysis, and power analysis.
+
+* **PVT (Process, Voltage, Temperature):**
+  Key environmental factors affecting circuit performance.
+
+* **SkyWater 130nm Library (`sky130_fd_sc_hd__tt_025C_1v80.lib`):**
+  A typical process, voltage (1.8V), and temperature (25°C) standard cell timing library for SkyWater 130nm technology.
+
+* **Hierarchical Synthesis:**
+  Breaks design into modules synthesized separately, preserving hierarchy. Benefits include modularity, reusability, easier debugging, and faster synthesis of large designs.
+
+* **Flat Synthesis:**
+  Flattens entire design into a single-level netlist and optimizes globally. It can provide better optimization but is less scalable and harder to debug for large designs.
+
+* **Comparison of Hierarchical vs Flat Synthesis:**
+  Hierarchical is modular, scalable, and easier to maintain; flat provides better optimization but at the cost of complexity and runtime.
+
+* **Sub-Module Level Synthesis:**
+  Synthesizing smaller sub-modules independently enables faster turnaround, incremental compilation, easier verification, and parallel development.
+
+* **Flip-Flop Coding Styles and Optimization:**
+  Different types of flip-flops (asynchronous reset/set, synchronous reset/set) are coded differently to meet design needs for reset/set behavior and timing. Using proper coding style impacts synthesis results.
+
+
+
 
 
 
