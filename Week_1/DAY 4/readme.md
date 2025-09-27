@@ -158,6 +158,9 @@ endmodule
 
 ## Labs on Gate-level Simulation
 
- 
+![tool]()
+
+
+ ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2020-00-08.png)
 
 
