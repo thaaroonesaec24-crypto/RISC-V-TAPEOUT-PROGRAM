@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-1. [Gate-level Simulation (GLS)](#gate-level-simulation-gls)  
-   1.1 [Why GLS?](#why-gls)  
+1. [Gate-level Simulation (GLS)](#gate-level-simulation)  
+   1.1 [Why GLS?](#why-gls-?)  
    1.2 [GLS Using IVERILOG](#gls-using-iverilog)
 
 2. [Synthesis-Simulation Mismatch](#synthesis-simulation-mismatch)  
