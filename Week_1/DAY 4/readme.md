@@ -157,7 +157,7 @@ endmodule
 ---
 
 ## Labs on Gate-level Simulation
-
+**ternary_operator_mux.v-> GLS**
 ~~~
 module ternary_operator_mux (input i0 , input i1 , input sel , output y);
 	assign y = sel?i1:i0;
@@ -178,4 +178,24 @@ iverilog -o ~/a.out ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_mode
 gtkwave tb_ternary_operator_mux.vcd
 ~~~
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2020-15-40.png)
+-
+
+
+### bad_mux.v GLS
+
+~~~
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+~~~
+The output wave after synthsis
+
 ![tool]()
+
