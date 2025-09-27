@@ -12,11 +12,11 @@ end
 endmodule
 ~~~
 
-### RTL simulation waveform
+#### RTL simulation waveform
 
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-03-56.png)
 
- ### DOT view of incomp_if.v
+ #### DOT view of incomp_if.v
  
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-11-18.png)
 
@@ -27,8 +27,23 @@ endmodule
 
 
   ---
-## Lab on incomp_if2.v
+### Lab on incomp_if2.v
+#### RTL code 
+~~~
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
 
+end
+endmodule
+~~~
+#### RTL simulation waveform
 
-### RTL simulation waveform
- ![tool]()
+ ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-18-20.png)
+
+#### Dot viewer of incomp_if2.v
+![tool]()
