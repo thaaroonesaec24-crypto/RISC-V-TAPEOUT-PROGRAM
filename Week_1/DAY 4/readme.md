@@ -1,7 +1,7 @@
 # GLS,Blocking vs Non-Blocking and Synthesis Simulation Mismatch
 # Table of Contents
 
-1. [Gate-level Simulation (GLS)](#gate-level-simulation)
+1. [Gate-level Simulation (GLS)](gate-level-simulation)
 
 2. [Synthesis-Simulation Mismatch](synthesis-simulation-mismatch)
 
