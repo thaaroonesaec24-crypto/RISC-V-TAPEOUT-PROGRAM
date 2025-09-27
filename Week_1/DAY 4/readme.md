@@ -199,4 +199,20 @@ The output wave after synthsis
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2020-52-25.png)
 
+## Blocking Assignment Caveat
 
+**verilog code for blocking caveat :**
+
+~~~
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+~~~
+
+**Simulation for blocking_caveat**
+![tool]()
