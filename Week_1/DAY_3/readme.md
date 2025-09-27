@@ -202,3 +202,4 @@ The optimisied .dot file shows that the opt_check.v is just a AND gate
 ### LAB 2:
  The file used is opt_check2.v
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-27-54.png)
+ ![tool]()
