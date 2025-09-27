@@ -172,4 +172,36 @@ endmodule
 
 #### RTL simulation wave
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2023-05-56.png)
+-
+
+* Implements a 4-to-1 multiplexer using a `for` loop.
+* Inputs `i0` to `i3` are combined into a 4-bit wire `i_int` for easy indexing.
+* The loop runs from 0 to 3 inside an always block.
+* When the loop index `k` matches the select signal `sel`, it assigns `y` to `i_int[k]`.
+* This ensures only the selected input is assigned to the output.
+* This approach simplifies the code by avoiding multiple nested `if-else` or `case` statements, making it more concise.
+
+  ---
+
+### demux_generate.v
+#### RTL code
+~~~
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+		y_int[k] = i;
+end
+end
+endmodule
+~~~
+
+#### RTL simulation wave 
+
 ![tool]()
