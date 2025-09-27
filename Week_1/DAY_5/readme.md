@@ -2,6 +2,9 @@
 
 ## Lab on imcomplete if case
 
+### incomp_if.v
+
+#### RTL code
 ~~~
 module incomp_if (input i0 , input i1 , input i2 , output reg y);
 always @ (*)
@@ -27,7 +30,8 @@ endmodule
 
 
   ---
-### Lab on incomp_if2.v
+### incomp_if2.v
+
 #### RTL code 
 ~~~
 module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
@@ -60,5 +64,23 @@ endmodule
 
 ### Lab on incomp_case.v
 
+#### RTL code
+
+~~~
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+~~~
+
+#### RTL simulation waveform
+
+
+
 #### DOT viewer of incomp_case.v
-![tool]()
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-30-55.png)
