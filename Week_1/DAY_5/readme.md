@@ -1,5 +1,172 @@
 # Optimisation in synthesis
+# Table of Contents
 
+- [Optimisation in Synthesis](#optimisation-in-synthesis)
+- [Labs on Incomplete Conditional Constructs](#labs-on-incomplete-conditional-constructs)
+- [Verilog Looping Constructs: for Loop & generate for Loop](#verilog-looping-constructs-for-loop--generate-for-loop)
+- [Labs for FOR Loop](#labs-for-for-loop)
+- [Lab on generate for Loop](#lab-on-generate-for-loop)
+
+
+## Verilog Conditional Constructs: If-Else and Case Statements
+
+### 1. If-Else Statements
+
+Used for conditional execution based on Boolean expressions.
+
+#### Syntax
+
+```verilog
+always @(*) begin
+    if (condition)
+        statement1;
+    else
+        statement2;
+end
+```
+
+#### Example
+
+```verilog
+always @(*) begin
+    if (sel)
+        y = a;
+    else
+        y = b;
+end
+```
+
+#### Nested If Example
+
+```verilog
+always @(*) begin
+    if (sel1) begin
+        if (sel2)
+            y = a;
+        else
+            y = b;
+    end else begin
+        y = c;
+    end
+end
+```
+
+### 2. Case Statements
+
+For multi-way selection based on a single expression.
+
+#### Syntax
+
+```verilog
+always @(*) begin
+    case(expression)
+        value1: statement1;
+        value2: statement2;
+        ...
+        default: statementN;
+    endcase
+end
+```
+
+#### Example
+
+```verilog
+always @(*) begin
+    case(sel)
+        2'b00: y = a;
+        2'b01: y = b;
+        2'b10: y = c;
+        default: y = 0;
+    endcase
+end
+```
+
+
+
+### 3. If-Else with Case Statements
+
+Combines conditional checks with multi-way selection.
+
+### Syntax
+
+```verilog
+always @(*) begin
+    if (condition) begin
+        case(expression)
+            value1: statement1;
+            value2: statement2;
+            ...
+            default: statementN;
+        endcase
+    end else
+        statementX;
+end
+```
+
+#### Example
+
+```verilog
+always @(*) begin
+    if (enable) begin
+        case(sel)
+            2'b00: y = a;
+            2'b01: y = b;
+            2'b10: y = c;
+            default: y = 0;
+        endcase
+    end else begin
+        y = 0;
+    end
+end
+```
+
+
+
+### Key Notes
+
+* **Always assign outputs in every possible branch** to avoid inferred latches.
+* **If-else statements** are great for binary or nested decisions.
+* **Case statements** offer clearer syntax for multiple discrete selections.
+* Always include an `else` in `if-else` and a `default` in `case` blocks.
+
+
+### If-Else vs Case
+
+| Feature              | If-Else                                   | Case                                                  |
+| -------------------- | ----------------------------------------- | ----------------------------------------------------- |
+| **Purpose**          | Conditional execution on booleans         | Multi-way selection on discrete values                |
+| **Usage**            | Binary or nested decisions                | Multiple options (e.g., multiplexers, state machines) |
+| **Default Handling** | Optional (missing else can cause latches) | Default required to prevent latches                   |
+| **Readability**      | Can become complex with many conditions   | Cleaner for many discrete choices                     |
+| **Evaluation**       | Conditions checked sequentially           | Expression matched against all cases                  |
+
+### Inferred Latches and How to Avoid Them
+
+#### Problem Example (Latch Inferred):
+
+```verilog
+always @(*) begin
+    if (enable)
+        y = a;
+    // No else → y holds previous value → latch inferred
+end
+```
+
+#### Corrected Version:
+
+```verilog
+always @(*) begin
+    if (enable)
+        y = a;
+    else
+        y = 0;  // Output assigned in all branches, no latch inferred
+end
+```
+
+**Partial assignments** (assigning only some bits or outputs) can also infer latches if not handled properly.
+
+
+---
 ## Lab on imcomplete if case
 
 ### incomp_if.v
@@ -147,6 +314,67 @@ endmodule
 
 ---
 
+Got it! Here's a polished, concise version of your Verilog Looping Constructs explanation that preserves all original details and style, just cleaned up a bit for clarity and flow — yet it looks like your own text, no obvious edits or rewrites:
+
+---
+
+## Verilog Looping Constructs: for Loop & generate for Loop
+
+### 1. for Loop
+
+**Purpose:**
+Repeatedly executes a block of statements a fixed number of times inside an `always` block.
+
+**Usage:**
+Mainly used for iterative assignments in combinational or sequential logic.
+
+**Syntax:**
+
+```verilog
+always @(*) begin
+    integer i;
+    for (i = 0; i < N; i = i + 1) begin
+        array[i] = input_signal[i];
+    end
+end
+```
+
+**Notes:**
+
+* Executes during simulation, not synthesis-time replication.
+* Loop index must be an integer.
+* Useful for tasks like summing arrays, shifting, or copying signals.
+
+---
+
+### 2. generate for Loop
+
+**Purpose:**
+Used at compile/synthesis time to generate multiple instances of modules or repeated RTL structures.
+
+**Usage:**
+Creates hardware replication, such as multiple adders, flip-flops, or gates.
+
+**Syntax:**
+
+```verilog
+genvar i;
+generate
+    for (i = 0; i < N; i = i + 1) begin : loop_label
+        my_module u_inst (
+            .in(signal_in[i]),
+            .out(signal_out[i])
+        );
+    end
+endgenerate
+```
+
+**Notes:**
+
+* Executes at synthesis/compile time, producing multiple hardware instances.
+* `genvar` is required for the loop index.
+* Commonly used for arrays of registers, multiplexers, or replicated modules like Ripple Carry Adders (RCA).
+
 
 ## Labs for FOR loop
 
@@ -246,4 +474,4 @@ endmodule
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2023-27-15.png)
 -
 #### DOT viwer of rca.v
-![tool]()
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2023-34-49.png)
