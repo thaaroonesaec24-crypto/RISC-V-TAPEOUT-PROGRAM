@@ -1,3 +1,13 @@
+# Table of Contents
+
+1. [INTRODUCTION TO TIMING LIBRARIES](#introduction-to-timing-libraries)  
+2. [What is PVT?](#what-is-pvt)  
+3. [What is sky130_fd_sc_hd__tt_025c_1v80lib?](#what-is-sky130_fd_sc_hd__tt_025c_1v80lib)  
+4. [Hierarchical and Flat Synthesis](#hierarchical-and-flat-synthesis)  
+5. [Sub Module Level Synthesis](#sub-module-level-synthesis)  
+6. [Various Flip Flops Coding Styles and Optimization](#various-flip-flops-coding-styles-and-optimization)  
+
+
 # INTRODUCTION TO TIMING LIBRARIES
 
  A .lib file (Liberty file) is a text-based technology library that defines the functionality, timing, power, and area of standard cells, and is used in synthesis, timing, and power analysis.
