@@ -46,4 +46,19 @@ endmodule
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-18-20.png)
 
 #### Dot viewer of incomp_if2.v
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-24-38.png)
+
+
+1. **Conditional assignments:**
+
+   * If `i0` is true, `y` is assigned the value of `i1`.
+   * Else if `i0` is false and `i2` is true, `y` is assigned the value of `i3`.
+
+2. **Incomplete behavior if both `i0` and `i2` are false:**
+
+   * The output `y` retains its previous value because there is no `else` clause, which may cause unintended latch inference.
+
+### Lab on incomp_case.v
+
+#### DOT viewer of incomp_case.v
 ![tool]()
