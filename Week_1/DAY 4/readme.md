@@ -1,5 +1,37 @@
 # GLS,Blocking vs Non-Blocking and Synthesis Simulation Mismatch
 
+## Table of Contents
+
+1. [Gate-level Simulation (GLS)](#gate-level-simulation-gls)  
+   1.1 [Why GLS?](#why-gls)  
+   1.2 [GLS Using IVERILOG](#gls-using-iverilog)
+
+2. [Synthesis-Simulation Mismatch](#synthesis-simulation-mismatch)  
+   2.1 [Why it Happens](#why-it-happens)
+
+3. [Missing Sensitivity List](#missing-sensitivity-list)  
+   3.1 [What is a Missing Sensitivity List?](#what-is-a-missing-sensitivity-list)  
+   3.2 [Example: Mux with Missing Sensitivity List](#example-mux-with-missing-sensitivity-list)  
+   3.3 [Corrected Version: Using `always @(*)`](#corrected-version-using-always)
+
+4. [Blocking vs Non-Blocking Assignments](#blocking-vs-non-blocking-assignments)  
+   4.1 [What Causes Mismatches?](#what-causes-mismatches)  
+   4.2 [Blocking vs Non-Blocking Comparison Table](#blocking-vs-non-blocking-comparison-table)  
+   4.3 [Why Mismatches Happen](#why-mismatches-happen)  
+   4.4 [Example of Mismatch](#example-of-mismatch)  
+   4.5 [Corrected Code Using Non-Blocking Assignments](#corrected-code-using-non-blocking-assignments)
+
+5. [Labs on Gate-level Simulation](#labs-on-gate-level-simulation)  
+   5.1 [ternary_operator_mux.v — GLS](#ternary_operator_muxv---gls)  
+   5.2 [bad_mux.v GLS](#bad_muxv-gls)
+
+6. [Blocking Assignment Caveat](#blocking-assignment-caveat)  
+   6.1 [Verilog Code for Blocking Caveat](#verilog-code-for-blocking-caveat)  
+   6.2 [Simulation for blocking_caveat](#simulation-for-blocking_caveat)  
+   6.3 [Dot File of blocking_caveat](#dot-file-of-blocking_caveat)  
+   6.4 [GLS of blocking_caveat](#gls-of-blocking_caveat)
+
+
 ## Gate-level Simulastion
 
  * Running the test-bench with netlist as design under test.
