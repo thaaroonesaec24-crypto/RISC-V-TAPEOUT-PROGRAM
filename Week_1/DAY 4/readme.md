@@ -1,17 +1,17 @@
 # GLS,Blocking vs Non-Blocking and Synthesis Simulation Mismatch
 # Table of Contents
 
-1. [Gate-level Simulation (GLS)](gate-level-simulation)
+1. [Gate-level Simulation (GLS)](#gate-level-simulation)
 
-2. [Synthesis-Simulation Mismatch](synthesis-simulation-mismatch)
+2. [Synthesis-Simulation Mismatch](#synthesis-simulation-mismatch)
 
-3. [Missing Sensitivity List](missing-sensitivity-list)
+3. [Missing Sensitivity List](#missing-sensitivity-list)
 
-4. [Blocking vs Non-Blocking Assignments](blocking-vs-non-blocking-assignments)
+4. [Blocking vs Non-Blocking Assignments](#blocking-vs-non-blocking-assignments)
 
-5. [Labs on Gate-level Simulation](labs-on-gate-level-simulation)
+5. [Labs on Gate-level Simulation](#labs-on-gate-level-simulation)
 
-6. [Blocking Assignment Caveat](blocking-assignment-caveat)
+6. [Blocking Assignment Caveat](#blocking-assignment-caveat)
 
 
 ## Gate level Simulastion
