@@ -215,7 +215,15 @@ endmodule
 ~~~
 
 **Simulation for blocking_caveat**
+
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2021-02-44.png)
+-
 
 **Dot file of blocking_caveat**
+
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2021-09-22.png)
+-
+
+**GLS of blocking_caveat**
+
 ![tool]()
