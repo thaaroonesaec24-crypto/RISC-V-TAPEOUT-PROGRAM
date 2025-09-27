@@ -1,7 +1,9 @@
 # Optimisation in synthesis
-# Table of Contents
 
-- [Optimisation in Synthesis](#optimisation-in-synthesis)
+
+## Table of Contents
+
+- [Verilog Conditional Constructs](#verilog-conditional-constructs)
 - [Labs on Incomplete Conditional Constructs](#labs-on-incomplete-conditional-constructs)
 - [Verilog Looping Constructs: for Loop & generate for Loop](#verilog-looping-constructs-for-loop--generate-for-loop)
 - [Labs for FOR Loop](#labs-for-for-loop)
