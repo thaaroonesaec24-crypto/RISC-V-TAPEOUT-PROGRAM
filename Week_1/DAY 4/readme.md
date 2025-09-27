@@ -167,5 +167,15 @@ module ternary_operator_mux (input i0 , input i1 , input sel , output y);
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2020-00-08.png)
 -
 
-![tool]()
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2020-08-32.png)
 -
+
+The commands to run GLS simulation is
+
+~~~
+iverilog -o ~/a.out ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+~~~
+
+![tool]()
