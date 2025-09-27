@@ -18,11 +18,12 @@ endmodule
 #### RTL simulation waveform
 
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-03-56.png)
+-
 
  #### DOT view of incomp_if.v
  
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-11-18.png)
-
+-
 
 * **Conditional assignment**: If the input i0 is true (logic 1), the output y is assigned the value of input i1.
 
@@ -48,10 +49,12 @@ endmodule
 #### RTL simulation waveform
 
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-18-20.png)
+-
 
 #### Dot viewer of incomp_if2.v
-![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-24-38.png)
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-24-38.png)
+-
 
 1. **Conditional assignments:**
 
@@ -83,11 +86,12 @@ endmodule
 #### RTL simulation waveform
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-37-30.png)
+-
 
 #### DOT viewer of incomp_case.v
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-30-55.png)
-
+-
 1. **Selective output based on `sel`:**
 
    * When `sel` is `2'b00`, `y` is assigned the value of `i0`.
@@ -116,9 +120,14 @@ endmodule
 ~~~
 
 #### RTL simulation waveform
-![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-46-22.png)
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-46-22.png)
+-
 
 #### DOT viewer for bad_case.v
-![tool]()
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY_5/pictures/Screenshot%20from%202025-09-27%2022-50-08.png)
+-
+
+#### GLS simulation 
+![tool]()
