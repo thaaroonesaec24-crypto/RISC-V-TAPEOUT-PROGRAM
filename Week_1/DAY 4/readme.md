@@ -242,3 +242,31 @@ endmodule
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/DAY%204/pictures/Screenshot%20from%202025-09-27%2021-16-57.png)
 -
+
+
+
+
+## Summary
+
+This README covers essential concepts and practical insights into **Gate-Level Simulation (GLS)** and common issues faced during **RTL to gate-level synthesis** verification in digital design.
+
+### Key Points:
+
+* **Gate-Level Simulation (GLS):**
+  GLS is used to verify the functional correctness of a synthesized netlist (gate-level representation) against the original RTL design. This ensures the design works correctly in actual hardware.
+
+* **Synthesis-Simulation Mismatch:**
+  Sometimes simulation results at RTL do not match post-synthesis behavior due to factors like missing sensitivity lists, incorrect usage of blocking vs non-blocking assignments, or non-standard Verilog coding.
+
+* **Missing Sensitivity List:**
+  In Verilog, an `always` block’s sensitivity list must include all signals that affect the output. Missing signals cause simulation mismatches, although synthesized hardware works correctly.
+
+* **Blocking vs Non-Blocking Assignments:**
+  Blocking (`=`) and non-blocking (`<=`) assignments behave differently in simulation and hardware. Misuse, especially in sequential logic, can lead to mismatches between simulated and real hardware behavior.
+
+* **Practical Examples and Labs:**
+  The README includes example Verilog modules (e.g., mux with missing sensitivity list, blocking assignment caveat) along with corresponding simulations and waveforms to illustrate these issues.
+
+* **Why GLS Matters:**
+  Running GLS with synthesized netlists is crucial for verifying real-world hardware correctness beyond RTL simulation.
+
