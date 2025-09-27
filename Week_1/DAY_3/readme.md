@@ -201,5 +201,18 @@ The optimisied .dot file shows that the opt_check.v is just a AND gate
 
 ### LAB 2:
  The file used is opt_check2.v
+ 
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-27-54.png)
+ 
+ Acts as a multiplexer:
+- y = 1 if a is true.
+- y = b if a is false.
+  
+ This code is just a **or** between a and b. 
+ 
+ so, the optimized version is just a or between a and b
+ 
+ ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-32-23.png)
+
+ For file opt_check3.v
  ![tool]()
