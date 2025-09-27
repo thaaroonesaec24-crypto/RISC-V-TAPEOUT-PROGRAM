@@ -173,7 +173,7 @@ end
 
 
 ---
-## Lab on imcomplete if case
+## Lab on incomplete if case
 
 ### incomp_if.v
 
