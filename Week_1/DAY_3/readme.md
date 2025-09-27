@@ -267,6 +267,7 @@ This D flip-flop has:
     * Loads constant 1 when not in reset
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2015-30-27.png)
+--
 
 ### dff_const2.v
 
@@ -292,7 +293,8 @@ Effectively, q is always 1, regardless of the clock or reset.
 
 In short, this flip-flop behaves like a constant logic 1 generator.
 
-![tool]()
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2015-35-21.png)
+--
 
 ### dff_const3.v
 
