@@ -2,12 +2,16 @@
 
 
 ## Table of Contents
+# Table of Contents
 
 - [Verilog Conditional Constructs](#verilog-conditional-constructs)
+- [Lab on Incomplete If Case](#lab-on-incomplete-if-case)
+- [Lab on Incomplete Case](#lab-on-incomplete-case)
 - [Labs on Incomplete Conditional Constructs](#labs-on-incomplete-conditional-constructs)
 - [Verilog Looping Constructs: for Loop & generate for Loop](#verilog-looping-constructs-for-loop--generate-for-loop)
 - [Labs for FOR Loop](#labs-for-for-loop)
 - [Lab on generate for Loop](#lab-on-generate-for-loop)
+
 
 
 ## Verilog Conditional Constructs: If-Else and Case Statements
