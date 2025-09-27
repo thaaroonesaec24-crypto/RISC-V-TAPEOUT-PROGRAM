@@ -170,6 +170,7 @@ One register `R` drives 100 gates. Instead, clone `R` into `R1` and `R2`, each d
 The files we are using in the labs are 
 
 ![Tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2012-57-37.png)
+--
 
 The command used for logic optimization is 
 ~~~
@@ -179,6 +180,7 @@ opt_clean -purge
 We used the opt_check.v file for this lab
 
 ![tools](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-14-53.png)
+--
 
 #### Explanation:
 
@@ -198,11 +200,13 @@ show
 ~~~
 The optimisied .dot file shows that the opt_check.v is just a AND gate 
 ![Tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-11-20.png)
+--
 
 ### LAB 2:
  The file used is opt_check2.v
  
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-27-54.png)
+ --
  
  Acts as a multiplexer:
 - y = 1 if a is true.
@@ -213,6 +217,23 @@ The optimisied .dot file shows that the opt_check.v is just a AND gate
  so, the optimized version is just a or between a and b
  
  ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2013-32-23.png)
+ --
 
  For file opt_check3.v
- ![tool]()
+ 
+ ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2014-57-37.png)
+ --
+
+Three inputs (a, b, c), output y.
+
+Nested ternary logic:
+
+If a = 1, y = c.
+
+If a = 0, y = !c.
+
+Logic simplifies to:
+
+y = a ? c : !c
+
+![tool]()
