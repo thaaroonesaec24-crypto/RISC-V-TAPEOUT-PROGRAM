@@ -237,3 +237,9 @@ Logic simplifies to:
 y = a ? c : !c
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2015-03-18.png)
+
+---
+# Sequential Logic Optimisation
+The files we are going to use are
+
+![tool]()
