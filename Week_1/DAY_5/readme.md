@@ -3,8 +3,7 @@
 
 ## Table of Contents
 # Table of Contents
-
-- [Verilog Conditional Constructs](#verilog-conditional-constructs)
+- [Verilog Conditional Constructs: If-Else and Case Statements](#verilog-conditional-constructs-if-else-and-case-statements)
 - [Lab on Incomplete If Case](#lab-on-incomplete-if-case)
 - [Lab on Incomplete Case](#lab-on-incomplete-case)
 - [Labs on Incomplete Conditional Constructs](#labs-on-incomplete-conditional-constructs)
