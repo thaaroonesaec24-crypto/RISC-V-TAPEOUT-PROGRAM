@@ -1,5 +1,13 @@
 # Combinational and Sequential optimisation
 
+## Table of Contents
+
+
+- [Combination Logic Optimisation](#combination-logic-optimisation)
+- [Boolean Logic Optimisation](#boolean-logic-optimisation)
+- [Sequential Logic Optimisation](#sequential-logic-optimisation)
+- [Labs](#labs)
+- [Sequential Logic Lab Files](#sequential-logic-lab-files)
 
 ## combination logic optimisation
 combinational optimization is about simplifying and improving combinational circuits for better area, speed, and power efficiency,which is critical for building efficient chips.
@@ -342,3 +350,20 @@ endmodule
 ---
 
 ![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2015-38-29.png)
+
+---
+
+### Summary: Combinational and Sequential Optimization
+    
+**Combinational Logic Optimization** focuses on simplifying logic circuits to improve area, speed, and power efficiency. Techniques like **constant propagation** replace known input constants to reduce circuit complexity, while **Boolean logic optimization** simplifies Boolean expressions using algebraic methods and tools to minimize gates and power consumption.
+
+**Sequential Logic Optimization** improves sequential circuits by minimizing states, simplifying transitions, and reducing hardware for memory elements, while maintaining the circuit's behavior. Key methods include:
+
+* **Sequential Constant Propagation:** Replacing registers holding constant values to simplify logic.
+* **Retiming:** Moving flip-flops across combinational logic to improve timing and increase clock speed.
+* **State Optimization:** Reducing the number of states or optimizing state encoding in finite state machines.
+* **Sequential Logic Cloning:** Duplicating registers or logic to manage fanout and improve timing.
+
+The lab exercises demonstrate practical use of these techniques, showing how optimization commands simplify logic designs and how sequential elements like flip-flops can be optimized for constant behavior or specific resets.
+
+
