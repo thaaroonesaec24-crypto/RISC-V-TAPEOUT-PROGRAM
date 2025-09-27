@@ -59,8 +59,8 @@ endmodule
 The `always` block only triggers on changes to `sel`. Changes in `i0` or `i1` won’t update `y`, causing simulation mismatches.
 
 ### Corrected Version: Using `always @(*)`
-
-```verilog
+~~~
+verilog
 module mux (
     input i0,
     input i1,
@@ -78,3 +78,86 @@ end
 
 endmodule
 ~~~
+
+
+
+
+## Blocking vs Non-Blocking Assignments
+
+### What Causes Mismatches?
+ **Blocking (`=`)** and **non-blocking (`<=`)** assignments behave differently in simulation, which can sometimes lead to mismatches between **simulation results** and **actual synthesized hardware behavior** if used incorrectly.
+
+
+### Blocking (`=`) vs Non-Blocking (`<=`) Assignments
+
+| Feature           | Blocking (`=`)                                                                  | Non-Blocking (`<=`)                                                        |
+| ----------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Execution order   | Executes statements **sequentially**, blocking the next until current completes | Executes statements **concurrently**, all RHS evaluated before LHS updated |
+| Usage             | Typically used in **combinational logic** or testbenches                        | Used in **sequential logic** (inside clocked always blocks)                |
+| Simulation result | Updates immediately, can cause unintended ordering effects                      | Updates after all RHS are evaluated, modeling parallel hardware behavior   |
+
+### Why Mismatches Happen?
+
+* Using blocking assignments (`=`) in sequential (clocked) blocks can cause simulation to show behavior different from hardware, as hardware updates all flip-flops in parallel on clock edges.
+* Using non-blocking (`<=`) incorrectly in combinational logic may cause unintended delays or latches.
+
+### Example of Mismatch
+
+~~~
+verilog
+module mismatch_example(
+    input clk,
+    input d,
+    output reg q1,
+    output reg q2
+);
+
+// Incorrect use of blocking assignments in sequential logic
+always @(posedge clk) begin
+    q1 = d;     // Blocking assignment
+    q2 = q1;    // q2 immediately gets the updated q1 in simulation
+end
+
+endmodule
+~~~
+
+**Simulation behavior:**
+
+* `q1` gets `d`
+* `q2` immediately gets the new value of `q1` (which is `d`), so `q2` follows `q1` in the same cycle.
+
+**Synthesized hardware behavior:**
+
+* Both `q1` and `q2` are flip-flops clocked together; `q2` will get the **previous** value of `q1` (before clock edge), not the updated one.
+
+
+
+### Corrected Code Using Non-Blocking Assignments
+~~~
+verilog
+module mismatch_fixed(
+    input clk,
+    input d,
+    output reg q1,
+    output reg q2
+);
+
+always @(posedge clk) begin
+    q1 <= d;     // Non-blocking assignment
+    q2 <= q1;    // q2 gets q1's value from previous cycle
+end
+
+endmodule
+~~~
+
+**Result:**
+
+* Simulation matches synthesized hardware: `q2` always lags `q1` by one clock cycle.
+
+---
+
+## Labs on Gate-level Simulation
+
+ 
+
+
