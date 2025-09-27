@@ -170,4 +170,8 @@ One register `R` drives 100 gates. Instead, clone `R` into `R1` and `R2`, each d
 The files we are using in the labs are 
 ![Tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2012-57-37.png)
 
-
+The command used for logic optimization is 
+~~~
+opt_clean -purge
+~~~
+![Tool]()
