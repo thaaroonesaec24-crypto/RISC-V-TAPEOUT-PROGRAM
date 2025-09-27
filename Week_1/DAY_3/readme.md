@@ -242,4 +242,101 @@ y = a ? c : !c
 # Sequential Logic Optimisation
 The files we are going to use are
 
+![tool](https://github.com/thaaroonesaec24-crypto/RISC-V-TAPEOUT-PROGRAM/blob/main/Week_1/Pictures/Screenshot%20from%202025-09-27%2015-10-06.png)
+
+### dff_const1.v
+
+~~~
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+~~~
+
+**Functionality**
+
+This D flip-flop has:
+
+    * Asynchronous reset to 0
+    * Loads constant 1 when not in reset
+
+![tool]()
+
+### dff_const2.v
+
+~~~
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+~~~
+
+**Functionality**
+
+   * Asynchronous reset to 1: When reset is high, q is set to 1.
+   * Constant output 1: On every positive clock edge (when not in reset), q is also set to 1.
+
+Effectively, q is always 1, regardless of the clock or reset.
+
+In short, this flip-flop behaves like a constant logic 1 generator.
+
+![tool]()
+
+### dff_const3.v
+
+~~~
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+~~~
+
+
+###  Functionality Description
+
+####  **Asynchronous Reset Behavior**
+
+* **When `reset` is high** (`reset = 1`):
+
+  * `q` is set to **1**
+  * `q1` is set to **0**
+* This happens **immediately**, regardless of the clock.
+
+####  **Clocked Behavior (on the positive edge of the clock)**
+
+* When **`reset` is low** (`reset = 0`), and a **rising clock edge** occurs:
+
+  * `q1` is assigned the value **1**
+  * `q` takes the **previous value of `q1`**
+
+    * This is because **non-blocking assignments (`<=`)** are used, meaning all right-hand sides are evaluated before updating the left-hand sides.
+
+---
+
 ![tool]()
